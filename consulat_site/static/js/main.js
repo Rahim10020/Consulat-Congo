@@ -93,6 +93,22 @@ document
     }, 1500);
   });
 
+function togglePassword() {
+  const passwordInput = document.getElementById("adminPassword");
+  const eyeIcon = document.getElementById("eyeIcon");
+  const eyeSlashIcon = document.getElementById("eyeSlashIcon");
+
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    eyeIcon.classList.add("hidden");
+    eyeSlashIcon.classList.remove("hidden");
+  } else {
+    passwordInput.type = "password";
+    eyeIcon.classList.remove("hidden");
+    eyeSlashIcon.classList.add("hidden");
+  }
+}
+
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
