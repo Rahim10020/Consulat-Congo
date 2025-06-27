@@ -1,62 +1,69 @@
 <section id="contact" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-bold text-congo-green mb-4">
-                Contactez-nous
-            </h2>
-            <div class="w-24 h-1 bg-congo-yellow mx-auto mb-6"></div>
-            <p class="text-gray-700 max-w-2xl mx-auto">
-                Pour toute question ou information supplémentaire
-            </p>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div>
-                <h3 class="text-xl font-bold text-congo-green mb-6">Coordonnées</h3>
-                
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="bg-congo-green text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-800">Adresse</h4>
-                            <p class="text-gray-600">
-                                Consulat Honoraire de la République du Congo<br>
-                                Cotonou, Bénin
-                            </p>
-                        </div>
-                    </div>
-                    
-                    <!-- Autres informations de contact -->
-                    
-                </div>
-            </div>
-            
-            <div>
-                <h3 class="text-xl font-bold text-congo-green mb-6">Envoyez-nous un message</h3>
-                
-                <form class="space-y-4">
-                    {% csrf_token %}
-                    <div>
-                        <label for="contactName" class="block text-gray-700 font-medium mb-2">Nom Complet</label>
-                        <input 
-                            type="text" 
-                            id="contactName" 
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-congo-green focus:border-transparent"
-                        >
-                    </div>
-                    
-                    <!-- Autres champs du formulaire de contact -->
-                    
-                    <button 
-                        type="submit"
-                        class="bg-congo-green hover:bg-green-800 text-white font-bold py-3 px-8 rounded-lg transition duration-300"
-                    >
-                        Envoyer le message
-                    </button>
-                </form>
-            </div>
-        </div>
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-2xl md:text-4xl font-bold text-congo-green mb-4">
+        Contactez-nous
+      </h2>
+      <div class="w-24 h-1 bg-congo-yellow mx-auto mb-6"></div>
+      <p class="text-gray-800 max-w-2xl mx-auto">
+        Pour toute question ou information supplémentaire
+      </p>
     </div>
+
+    <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      <div>
+        <h3 class="text-xl font-bold text-congo-green mb-6">Coordonnées</h3>
+
+        <div class="space-y-6">
+          <div class="flex items-start">
+            <div
+              class="bg-congo-green text-white w-12 h-12 rounded-full flex items-center justify-center mr-4"
+            >
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-800">Adresse</h4>
+              <p class="text-gray-600">
+                Consulat Honoraire de la République du Congo<br />
+                Cotonou, Bénin
+              </p>
+            </div>
+          </div>
+
+          <!-- Autres informations de contact -->
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-bold text-congo-green mb-6">
+          Envoyez-nous un message
+        </h3>
+
+        <form class="space-y-4">
+          {% csrf_token %}
+          <div>
+            <label
+              for="contactName"
+              class="block text-gray-800 font-medium"
+              >Nom Complet</label
+            >
+            <input
+              type="text"
+              id="contactName"
+              class="w-full py-2 px-4 focus:outline-none text-sm text-gray-700 placeholder-text-gray-600 font-medium border-2 border-gray-200 rounded-md bg-[#EEF1F5] transition-all duration-200"
+            />
+          </div>
+
+          <!-- Autres champs du formulaire de contact -->
+
+          <button
+            type="submit"
+            class="w-full bg-congo-green hover:bg-green-800 text-white font-bold py-2 px-8 rounded-md transition duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-700 focus:ring-opacity-50"
+          >
+            Envoyer le message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
