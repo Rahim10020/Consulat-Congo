@@ -9,13 +9,3 @@ body {
     background-size: cover;
     background-position: center;
 }
-
-.flag-pattern {
-    background: repeating-linear-gradient(
-        0deg,
-        #009543,
-        #009543 20px,
-        #FBDE4A 20px,
-        #FBDE4A 40px
-    );
-}
