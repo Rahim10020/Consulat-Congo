@@ -1,23 +1,43 @@
-<nav class="fixed w-full z-50 bg-congo-green shadow-lg py-4">
-    <div class="container mx-auto px-4 flex justify-between items-center">
+<nav class="fixed w-full z-50 bg-congo-green shadow-sm py-4">
+    <div class="container mx-auto px-3 flex justify-between items-center">
+        
+        <!-- Logo + Texte -->
         <a href="#" class="flex items-center space-x-3">
             <div class="bg-white rounded-full w-12 h-12 flex items-center justify-center">
                 <div class="bg-congo-red rounded-full w-8 h-8"></div>
             </div>
-            <span class="text-white text-xl font-bold">65ÈME ANNIVERSAIRE</span>
+            <span class="text-white text-md md:text-xl font-bold">65ÈME ANNIVERSAIRE</span>
         </a>
-        
+
+        <!-- Menu principal (desktop) -->
         <div class="hidden md:flex space-x-8">
-            <a href="#accueil" class="text-white hover:text-congo-yellow font-medium">Accueil</a>
-            <a href="#activites" class="text-white hover:text-congo-yellow font-medium">Activités</a>
-            <a href="#objectifs" class="text-white hover:text-congo-yellow font-medium">Objectifs</a>
-            <a href="#inscription" class="text-white hover:text-congo-yellow font-medium">Inscription</a>
-            <a href="#contact" class="text-white hover:text-congo-yellow font-medium">Contact</a>
-            <button onclick="openAdminPanel()" class="bg-congo-yellow text-congo-green font-bold py-2 px-4 rounded-lg hover:bg-yellow-400 transition">Admin</button>
+            <a href="#accueil" class="text-white hover:text-congo-yellow hover:underline font-medium">Accueil</a>
+            <a href="#objectifs" class="text-white hover:text-congo-yellow hover:underline font-medium">Objectifs</a>
+            <a href="#activites" class="text-white hover:text-congo-yellow hover:underline font-medium">Activités</a>
+            <a href="#inscription" class="text-white hover:text-congo-yellow hover:underline font-medium">Inscription</a>
+            <a href="#contact" class="text-white hover:text-congo-yellow hover:underline font-medium">Contact</a>
         </div>
-        
-        <button class="md:hidden text-white">
+
+        <!-- Bouton Admin (desktop) -->
+        <button onclick="openAdminPanel()" class="hidden md:block bg-congo-yellow text-congo-green font-bold py-1 px-4 rounded-md hover:bg-yellow-400 transition">
+            Admin
+        </button>
+
+        <!-- Menu burger (mobile) -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
             <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-congo-green px-6 pb-4 pt-2">
+        <a href="#accueil" class="block text-white py-2 hover:text-congo-yellow">Accueil</a>
+        <a href="#activites" class="block text-white py-2 hover:text-congo-yellow">Activités</a>
+        <a href="#objectifs" class="block text-white py-2 hover:text-congo-yellow">Objectifs</a>
+        <a href="#inscription" class="block text-white py-2 hover:text-congo-yellow">Inscription</a>
+        <a href="#contact" class="block text-white py-2 hover:text-congo-yellow">Contact</a>
+        <button onclick="openAdminPanel()" class="w-full mt-3 bg-congo-yellow text-congo-green font-bold py-2 rounded-md hover:bg-yellow-400 transition">
+            Admin
         </button>
     </div>
 </nav>
