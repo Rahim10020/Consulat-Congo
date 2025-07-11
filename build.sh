@@ -3,7 +3,13 @@
 set -o errexit
 
 pip install -r requirements.txt
-bun install
-bun run build:css
+
+# Clean npm cache and reinstall
+rm -rf node_modules
+rm -f package-lock.json
+npm cache clean --force
+npm install
+
+npm run build:css
 python manage.py collectstatic --no-input
-python manage.py migrate 
+python manage.py migrate
